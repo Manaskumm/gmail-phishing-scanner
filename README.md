@@ -10,7 +10,7 @@ This Chrome extension automatically scans Gmail emails to detect phishing attemp
 
 **Chrome Extension Manifest V3**: Latest Chrome extension platform.
 
-**CSS3**: Modern styling with glassmorphism effects.
+**CSS3**: Modern styling.
 
 **JavaScript**: Content script for Gmail scanning and analysis.
 
