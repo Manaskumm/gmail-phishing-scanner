@@ -2,6 +2,45 @@
 
 This Chrome extension automatically scans Gmail emails to detect phishing attempts and suspicious content. It analyzes links, keywords, and email patterns to provide risk scores and visual warnings for potentially dangerous emails.
 
+## Quick Start (after downloading)
+
+### Windows PowerShell
+
+```powershell
+# 1) Go to the inner project folder
+cd .\gmail-phishing-scanner-main
+
+# 2) Install exact dependencies
+npm ci --no-audit --no-fund
+
+# 3) Build the extension (outputs to .\\build)
+npm run build
+
+# Optional: start local dev server (hot reload for UI pages)
+npm start
+```
+
+### macOS/Linux (bash/zsh)
+
+```bash
+# 1) Go to the inner project folder
+cd gmail-phishing-scanner-main
+
+# 2) Install exact dependencies
+npm ci --no-audit --no-fund
+
+# 3) Build the extension (outputs to ./build)
+npm run build
+
+# Optional: start local dev server (hot reload for UI pages)
+npm start
+```
+
+### Load the built extension in Chrome
+- Open `chrome://extensions/`
+- Enable "Developer mode"
+- Click "Load unpacked" and select the `build` folder
+
 ## Technologies Used
 
 **React 18**: Modern UI framework for the popup interface.
