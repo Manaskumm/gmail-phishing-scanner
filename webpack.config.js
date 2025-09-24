@@ -228,6 +228,17 @@ if (env.NODE_ENV === 'development') {
     minimizer: [
       new TerserPlugin({
         extractComments: false,
+        terserOptions: {
+          mangle: {
+            // Prevent variable name conflicts by using safer mangling
+            reserved: ['GmailPhishingScannerModule', 'PhishingDetectionConfig', 'analyzeUrlForPhishing', 'analyzeEmailContentForPhishing', 'addPhishingWarningIndicator', 'scanAllEmailsForPhishing']
+          },
+          compress: {
+            // Disable some aggressive optimizations that might cause conflicts
+            drop_console: false,
+            drop_debugger: false
+          }
+        }
       }),
     ],
   };
